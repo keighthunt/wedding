@@ -226,6 +226,7 @@ $(document).ready(function () {
         } else {
             $.post('https://script.google.com/macros/s/AKfycbzc9niNrr-2zN8SHcw67ubUFJi3IeiOrRlPpKicOREbnjDCuPA/exec', user)
                 .done(function (data) {
+                    console.log('here');
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {

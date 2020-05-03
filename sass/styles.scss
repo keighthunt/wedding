@@ -272,6 +272,9 @@ Hero
   h1 {
     color: $txt-light;
   }
+  h3 {
+    color: $txt-light;
+  }
   p.intro {
     color: $txt-light;
     font-size: 20px;
@@ -279,11 +282,12 @@ Hero
     margin-bottom: 80px;
   }
   .hero-content {
-    padding-top: 40%;
-  }
-  .hero-content img {
-    width: 55%;
-    margin-bottom: 12%;
+    position: absolute;
+    bottom: 80px;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 0;
+    max-width: 400px;
   }
 }
 .navigation {
@@ -297,6 +301,17 @@ Hero
   background-color:rgba(17,17,17,0.5);
   z-index: 999;
   width: 100%;
+
+  header ul.primary-nav li a {
+    color: $txt-light;
+    font-weight: normal;
+    font-size: 13px;
+
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 header {
   padding: 50px 0;
@@ -329,11 +344,13 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: $accent-color;
         padding-right: 25px;
+        font-size: 16px;
+        font-weight: 600;
 
         &:hover {
-          color: $accent-color;
+          color: $accent-color-hover;
         }
       }
       &:last-child a {
@@ -344,14 +361,6 @@ header {
   ul.member-actions {
     li {
       display: inline;
-
-      a {
-        color: $txt-light;
-
-        &:hover {
-          color: $accent-color;
-        }
-      }
     }
   }
   .header-nav {
@@ -603,7 +612,7 @@ Features-stack
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba($white-color, 0.5);
+      background-color: rgba($white-color, 0.4);
       -moz-transition: all 300ms ease-in-out;
       -o-transition: all 300ms ease-in-out;
       -webkit-transition: all 300ms ease-in-out;
