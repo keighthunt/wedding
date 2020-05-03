@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+    /***************** Timeline ******************/
+
+    var params = {
+        timelineBlocks: $('.timeline-block'),
+        portfolioBlock: $('#portfolio .item'),
+        offset: 0.8,
+        portfolioCalled: false
+      },
+      scrollSection;
+
+
+  function hideBlocks(blocks, offset) {
+    blocks.each(function(){
+      ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-milestone, .timeline-content').addClass('is-hidden');
+    });
+  }
+
+  function showBlocks(blocks, offset) {
+    blocks.each(function(){
+      ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-milestone').hasClass('is-hidden') ) && $(this).find('.timeline-milestone, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
+    });
+  }
+
+  function checkStatusOfTimeline() {
+    (!window.requestAnimationFrame)
+        ? setTimeout(function(){ showBlocks(params.timelineBlocks, params.offset); }, 100)
+        : window.requestAnimationFrame(function(){ showBlocks(params.timelineBlocks, params.offset); });
+  }
+
+  hideBlocks(params.timelineBlocks, params.offset);
+      $(window).on('scroll', function(){
+        checkStatusOfTimeline();
+      });
+
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -159,7 +193,7 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Sam & Kate's Wedding",
+            title: "Sam and Kate's Wedding",
 
             // Event start date
             start: new Date('Oct 15, 2021 16:00'),
@@ -172,10 +206,7 @@ $(document).ready(function () {
             end: new Date('October 15, 2021 11:30'),
 
             // Event Address
-            address: 'That Amazing Palace',
-
-            // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact."
+            address: 'That Amazing Place',
         }
     });
 
@@ -184,6 +215,7 @@ $(document).ready(function () {
 
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
+        $('#rsvp-modal').modal('show');
         e.preventDefault();
         var data = $(this).serialize();
 
@@ -193,7 +225,7 @@ $(document).ready(function () {
             && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzc9niNrr-2zN8SHcw67ubUFJi3IeiOrRlPpKicOREbnjDCuPA/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -216,7 +248,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = {lat: 51.773399, lng: 0.148741};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
