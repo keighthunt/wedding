@@ -61,6 +61,9 @@ section .header {
 .section-padding {
   padding: $section-padding;
 }
+.section-padding-top {
+  padding: $section-padding 0 0;
+}
 .section-border {
   border-bottom: 1px solid $keyline-color;
 }
@@ -765,10 +768,14 @@ Google map
   height: 500px;
   width: 100%;
 }
-#map-content-wrapper {
+.map-container {
   position: relative;
-  margin-top: -502px;
-  margin-bottom: 120px;
+}
+#map-content-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
 }
 #map-content {
   margin-top: 40px;
@@ -833,7 +840,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, .fa-music, .fa-cutlery {
         font-size: 14px;
         position: absolute;
         top: 50%;
