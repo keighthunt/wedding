@@ -8,7 +8,8 @@ $(document).ready(function () {
         offset: 0.8,
         portfolioCalled: false
       },
-      scrollSection;
+      scrollSection,
+      attendance;
 
 
   function hideBlocks(blocks, offset) {
@@ -214,9 +215,31 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
+    $('.attending-box').click(function (e) {
+        e.preventDefault();
+        attendance = $(this).data('attending');
+
+        $('.attending-box').removeClass('active');
+        $(this).addClass('active');
+
+        if ( attendance === 'no' ) {
+            $('.not-attending').addClass('fade');
+        } else {
+            $('.not-attending').removeClass('fade');
+        }
+
+        setTimeout(function(){
+            $('.rsvp-form').removeClass('fade');
+        }, 800);
+    });
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var user = $(this).serialize();
+
+        user = user + '&attending='+attendance;
+
+        console.log(user);
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
@@ -226,6 +249,7 @@ $(document).ready(function () {
         } else {
             $.post('https://script.google.com/macros/s/AKfycbzc9niNrr-2zN8SHcw67ubUFJi3IeiOrRlPpKicOREbnjDCuPA/exec', user)
                 .done(function (data) {
+                    console.log(data);
                     console.log('here');
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));

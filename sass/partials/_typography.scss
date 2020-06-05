@@ -52,11 +52,11 @@ h1 {
 h2 {
   font-size: $font-size-h2;
   font-weight: $light;
-  color: $h2-color;
+  color: $txt-primary;
 }
 
 h3 {
-  color: $h3-color;
+  color: $txt-primary;
   font-size: $font-size-h4;
   font-weight: $bold;
   text-transform: uppercase;
@@ -70,7 +70,7 @@ h4 {
 
 h5 {
   font-size: $font-size-h5;
-  color: $h5-color;
+  color: $txt-primary;
   text-transform: uppercase;
   font-weight: $semibold;
 }
