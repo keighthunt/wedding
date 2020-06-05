@@ -204,7 +204,7 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('October 15, 2021 11:30'),
+            end: new Date('October 15, 2021 23:30'),
 
             // Event Address
             address: 'That Amazing Place',
@@ -235,11 +235,9 @@ $(document).ready(function () {
 
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
+
         var user = $(this).serialize();
-
-        user = user + '&attending='+attendance;
-
-        console.log(user);
+        user += '&attending='+attendance;
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
@@ -249,13 +247,13 @@ $(document).ready(function () {
         } else {
             $.post('https://script.google.com/macros/s/AKfycbzc9niNrr-2zN8SHcw67ubUFJi3IeiOrRlPpKicOREbnjDCuPA/exec', user)
                 .done(function (data) {
-                    console.log(data);
-                    console.log('here');
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
+                        $('.rsvp-form').addClass('hide');
+                        $('.attending-select').addClass('hide');
                     }
                 })
                 .fail(function (err) {
