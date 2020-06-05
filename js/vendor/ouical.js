@@ -54,13 +54,18 @@
 
         ical: function(event) {
             return this.ics(event, 'icon-ical', 'iCal');
+        },
+
+        outlook: function(event) {
+            return this.ics(event, 'icon-outlook', 'Outlook');
         }
     };
 
     var generateCalendars = function(event) {
         return {
             google: calendarGenerators.google(event),
-            ical: calendarGenerators.ical(event)
+            ical: calendarGenerators.ical(event),
+            outlook: calendarGenerators.outlook(event)
         };
     };
 

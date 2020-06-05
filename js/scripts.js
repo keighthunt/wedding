@@ -197,7 +197,7 @@ $(document).ready(function () {
             title: "Sam and Kate's Wedding",
 
             // Event start date
-            start: new Date('Oct 15, 2021 16:00'),
+            start: new Date('Oct 15, 2021 15:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
