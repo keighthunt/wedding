@@ -134,7 +134,7 @@ $(document).ready(function () {
                     "top": "26px",
                 });
                 $('header .navicon').css({
-                    "top": "34px",
+                    "top": "24px",
                 });
             } else {
                 $('section.navigation').removeClass('fixed');
@@ -162,7 +162,7 @@ $(document).ready(function () {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top - 90
+                        scrollTop: target.offset().top - 70
                     }, 800);
                     return false;
                 }
@@ -236,6 +236,8 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
 
+        $('.rsvp-btn').addClass('disable');
+
         var user = $(this).serialize();
         user += '&attending='+attendance;
 
@@ -249,6 +251,7 @@ $(document).ready(function () {
                 .done(function (data) {
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
+                        $('.rsvp-btn').addClass('disable');
                     } else {
                         $('#alert-wrapper').html('');
                         $('#rsvp-modal').modal('show');
@@ -257,7 +260,7 @@ $(document).ready(function () {
                     }
                 })
                 .fail(function (err) {
-                    console.log('error', err);
+                    $('.rsvp-btn').addClass('disable');
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
         }

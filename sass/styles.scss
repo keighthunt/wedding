@@ -818,6 +818,9 @@ RSVP form
     background: $accent-color;
     color: $white-color;
     line-height: 100px;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 15px;
+    }
     svg {
       display: none;
       width: 30px;
@@ -866,6 +869,10 @@ RSVP form
       border-radius: 3px;
       width: 100%;
       font-size: 13px;
+
+      &.disable {
+        pointer-events: none;
+      }
     }
     .form-input-group {
       width: 100%;
@@ -879,8 +886,15 @@ RSVP form
       position: relative;
       transition: opacity .5s ease-in-out;
       opacity: 1;
+
+      @media only screen and (max-width: 768px) {
+        transition: height .5s ease-in-out;
+      }
       &.fade {
         opacity: 0;
+        @media only screen and (max-width: 768px) {
+          height: 0;
+        }
       }
 
       i {
