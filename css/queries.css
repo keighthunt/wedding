@@ -238,15 +238,35 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .hero .hero-content {
+        bottom: auto;
+        top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 100px;
+    }
+
+    .hero-content h1, 
+    .hero-content h3 {
+        color: #000;
+    }
+}
+
 @media screen and (max-width: 640px) {
 
-    #eng-pics .img-wrap i {
-        font-size: 25px;
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        top: 10px;
-        right: 10px; }
+    #intro {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 0 0 20px;
+    }
+
+    .section-padding-top {
+        padding: 0;
+    }
     
     footer ul.footer-group {
         border-top: none;
@@ -284,10 +304,6 @@
 
     .hero .btn:first-of-type {
         margin-bottom: 20px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
     }
 
     .btn-margin-right {

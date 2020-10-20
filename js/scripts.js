@@ -162,7 +162,7 @@ $(document).ready(function () {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top - 70
+                        scrollTop: target.offset().top - 90
                     }, 800);
                     return false;
                 }
@@ -266,6 +266,43 @@ $(document).ready(function () {
         }
     });
 
+    /********************** Gallery **********************/
+
+    var gallery = document.querySelector('#gallery');
+    var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+    var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+    var resizeAll = function () {
+        var altura = getVal(gallery, 'grid-auto-rows');
+        var gap = getVal(gallery, 'grid-row-gap');
+        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+            var el = item;
+            el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+        });
+    };
+    gallery.querySelectorAll('img').forEach(function (item) {
+        //item.classList.add('byebye');
+        if (item.complete) {
+            console.log(item.src);
+        }else {
+            console.log(item);
+            item.addEventListener('load', function () {
+                var altura = getVal(gallery, 'grid-auto-rows');
+                var gap = getVal(gallery, 'grid-row-gap');
+                var gitem = item.parentElement.parentElement;
+                gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove('byebye');
+            });
+        }
+    });
+    resizeAll();
+    window.addEventListener('resize', resizeAll);
+    /********************** Gallery **********************/
+
+});
+
+timeline(document.querySelectorAll('.timeline'), {
+    verticalStartPosition: 'right',
+    verticalTrigger: '150px'
 });
 
 /********************** Extras **********************/

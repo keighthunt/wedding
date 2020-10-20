@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Stalemate);
 
 // Imports
 //@import "compass";
@@ -10,6 +11,7 @@
 @import "partials/buttons";
 @import "partials/colors";
 @import "partials/layout";
+@import "partials/timeline";
 
 /* ==========================================================================
 Global Styles
@@ -56,7 +58,7 @@ ul li {
   list-style: none;
 }
 section .header {
-  padding-bottom: 30px;
+  padding: 20px 0 30px;
 }
 .section-padding {
   padding: $section-padding;
@@ -190,7 +192,7 @@ Navigation
 .nav-toggle {
   position: absolute;
   top: 0;
-  right: 15px;
+  left: 15px;
   z-index: 999999;
   padding: 10px 35px 16px 0;
   cursor: pointer
@@ -207,7 +209,7 @@ Navigation
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
   border-radius: 1px;
-  background: #fff;
+  background: #000;
   cursor: pointer
 }
 .nav-toggle span:before {
@@ -246,7 +248,7 @@ Navigation
 .navicon {
   position: absolute;
   height: 26px;
-  right: 10px;
+  left: 10px;
   top: 48px;
   visibility: hidden;
   transition: all 300ms ease-in-out;
@@ -256,7 +258,7 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
+  height: 100vh;
   background: url('../img/IMG_0238.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -274,9 +276,14 @@ Hero
   }
   h1 {
     color: $txt-light;
+    font-family: 'Stalemate', cursive;
+    font-size: 180px;
+    line-height: 100px;
+    margin: 0;
   }
   h3 {
     color: $txt-light;
+    margin-top: 0;
   }
   p.intro {
     color: $txt-light;
@@ -290,7 +297,7 @@ Hero
     transform: translateX(-50%);
     left: 50%;
     padding: 0;
-    max-width: 400px;
+    min-width: 400px;
   }
 }
 .navigation {
@@ -305,6 +312,9 @@ Hero
   z-index: 999;
   width: 100%;
 
+  .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+    background: #fff;
+  }
   header ul.primary-nav li a {
     color: $txt-light;
     font-weight: normal;
@@ -412,18 +422,18 @@ Intro
   width: 80%;
 }
 
-#intro {
-  padding-top: 40px;
-  img {
-    max-width: 400px;
-    display: block;
-    margin: 0 auto;
-    height: auto;
-  }
-}
-#intro p {
-  text-align: center;
-}
+// #intro {
+//   padding-top: 40px;
+//   img {
+//     max-width: 400px;
+//     display: block;
+//     margin: 0 auto;
+//     height: auto;
+//   }
+// }
+// #intro p {
+//   text-align: center;
+// }
 
 /* ==========================================================================
 Features-stack
@@ -564,100 +574,18 @@ Features-stack
 }
 
 /* ==========================================================================
-.events
+Timeline
 ========================================================================== */
-.events {
-  .leftcol {
-    padding-right: 100px;
-    border-right: solid 1px $keyline-color;
-  }
-  .rightcol {
-    padding-left: 100px;
-  }
 
-  .time {
-    font-size: 13px;
-    font-style: italic;
-    text-transform: lowercase;
-    color: $txt-primary;
+.timeline__content {
+  h5 {
+    margin: 5px 0;
   }
 }
-
-/* ==========================================================================
-.blog
-========================================================================== */
-.blog {
-  padding-bottom: 120px;
-
-  img {
-    width: 100%;
-    height: auto;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
-  h2 {
-    font-size: $blog-post-title;
-    color: $txt-accent;
-    font-weight: $semibold;
-    text-transform: uppercase;
-    margin-top: 35px;
-  }
-  .btn {
-    margin-top: 20px;
-  }
-  .blog-img-wrap {
-    position: relative;
-    overflow: hidden;
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($white-color, 0.4);
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      -webkit-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0);
-      opacity: 0;
-    }
-    i {
-      color: $white-color;
-      font-size: 20px;
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: 25px;
-      right: 35px;
-    }
-  }
-  .blog-img-wrap:hover img, .blog-img-wrap:focus img {
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  .blog-img-wrap:hover .overlay, .blog-img-wrap:focus .overlay {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
-    filter: alpha(opacity=1);
-    opacity: 1;
-    z-index: 9;
-  }
-  figcaption i {
-    margin-left: 5px;
-    font-size: 15px;
-  }
-  figcaption a.blog-post-title {
-    color: $txt-primary;
-  }
-  figcaption a.blog-post-title:hover, figcaption a.blog-post-title:focus {
-    color: $txt-secondary;
-  }
+.timeline-date {
+  font-weight: bold;
 }
+
 
 /* ==========================================================================
 Instagram
@@ -668,74 +596,6 @@ Instagram
   }
 }
 
-/* ==========================================================================
-Engagement Pics
-========================================================================== */
-#eng-pics {
-  img {
-    width: 100%;
-    height: auto;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
-  .img-wrap {
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-  }
-  .img-wrap .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0; }
-  .img-wrap i {
-    color: #fff;
-    font-size: 15px;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 6px;
-    right: 6px; }
-  .img-wrap:hover img, .img-wrap:focus img {
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  .img-wrap:hover .overlay, .img-wrap:focus .overlay {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
-    filter: alpha(opacity=1);
-    opacity: 1;
-    z-index: 9; }
-  .diamond {
-    width: 230px;
-    height: 230px;
-    position: absolute;
-    bottom: -145px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 500;
-  }
-  .ring {
-    width: 75px;
-    height: 75px;
-    border-radius: 75px;
-    border: 10px solid #d0d3d4;
-    position: absolute;
-    left: 34%;
-    top: 75%;
-    z-index: -1;
-  }
-}
 
 /* ==========================================================================
 Embed video
@@ -783,6 +643,12 @@ Google map
   background: #fff;
   -webkit-transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
   transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
+  h4 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 0;
+  }
 }
 #btn-show-content {
   padding: 20px;
@@ -863,6 +729,7 @@ RSVP form
     &.fade {
       opacity: 0;
       position: absolute;
+      top: -100%;
     }
     .rsvp-btn {
       padding: 15px 0;
@@ -979,10 +846,16 @@ RSVP form
   }
 }
 
+#registry {
+  img {
+    max-width: 300px;
+  }
+}
 /* ==========================================================================
 Footer
 ========================================================================== */
 footer {
+  margin-top: 10px;
   .content {
     border-top: 1px solid $keyline-color;
     padding-bottom: 20px;
@@ -1025,145 +898,45 @@ body.modal-open {
   padding:25px;
 }
 
+
 /* ==========================================================================
-Timeline 
+gallery
 ========================================================================== */
 
-#timeline {
-  position: relative;
-  .timeline-container {
-    position: relative;
-    padding: 20px 0;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 18px;
-      height: 100%;
-      width: 4px;
-      background: white;
-      display: block;
-      @media only screen and (min-width: 510px) {
-        left: 50%;
-        margin-left: -2px;
-      }
-    }
-  }
-}
-.timeline-block {
-  position: relative;
-  margin: 2em 0;
-  @media only screen and (min-width: 510px) {
-    margin: 4em 0;
-  }
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  &:first-child {
-    margin-top: 0;
-    @media only screen and (min-width: 510px) {
-      margin-top: 0;
-    }
-  }
-  &:last-child {
-    margin-bottom: 0;
-    @media only screen and (min-width: 510px) {
-      margin-bottom: 0;
-    }
-  }
-}
-.timeline-milestone {
-  background: $accent-color;
-  position: absolute;
-  top: 4px;
-  left: 18px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-
-  @media only screen and (min-width: 510px) {
-    left: 50%;
-    margin-left: -2px;
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    .timeline-milestone.is-hidden {
-      visibility: hidden;
-    }
-    .timeline-milestone.bounce-in {
-      visibility: visible;
-      -webkit-animation: timeline-bounce-1 0.6s;
-      -moz-animation: timeline-bounce-1 0.6s;
-      animation: timeline-bounce-1 0.6s;
-    }
-  }
-}
-.timeline-content {
-  margin-left: 60px;
-  @media only screen and (min-width: 510px) {
-    margin: 0;
-    margin-left: 55%;
-  }
-
-  .timeline-date {
-    display: inline-block;
-    @media only screen and (min-width: 510px) {
-      position: absolute;
-      left: 40%;
-      top: 0px;
-      padding: 0;
-    }
-  }
-}
-@media only screen and (min-width: 510px) {
-  .timeline-content.is-hidden {
-    visibility: hidden;
-  }
-
-  .timeline-content.bounce-in {
-    visibility: visible;
-    -webkit-animation: timeline-bounce 0.6s;
-    -moz-animation: timeline-bounce 0.6s;
-    animation: timeline-bounce 0.6s; }
-  }
-@-webkit-keyframes timeline-bounce {
-  0% {
+  .byebye {
     opacity: 0;
-    -webkit-transform: translateX(100px); }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(-20px); }
-  100% {
-    -webkit-transform: translateX(0); } }
-@-moz-keyframes timeline-bounce {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(100px); }
-  60% {
-    opacity: 1;
-    -moz-transform: translateX(-20px); }
-  100% {
-    -moz-transform: translateX(0); } }
-@keyframes timeline-bounce {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -o-transform: translateX(100px);
-    transform: translateX(100px); }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(-20px);
-    -moz-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    -o-transform: translateX(-20px);
-    transform: translateX(-20px); }
-  100% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0); } }
+  }
+  .byebye:hover {
+    transform: scale(0.2) !important;
+  }
+  .gallery {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 8px;
+  }
+  .gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    transition: all 1.5s ease;
+  }
+  .gallery .content {
+    padding: 4px;
+  }
+  .gallery .gallery-item {
+    transition: grid-row-start 300ms linear;
+    transition: transform 300ms ease;
+    transition: all 0.5s ease;
+  }
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+  }
+  @media (max-width: 400px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+  }

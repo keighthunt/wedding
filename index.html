@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/timeline.min.js"></script>
+    
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -84,25 +86,40 @@
 </section>
 
 <section id="intro" class="">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Us</h3>
-            </div>
+    <div class="text-center header">
+        <h3>Us</h3>
+        <p>Through the years</p>
+    </div>
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="img/Baby_sam.JPG" alt="Baby Sam"></div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p>
-                    Some text about us maybe
-                </p>
-                <img src="img/samkate.gif">
-            </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/Kate_baby.jpeg" alt="Baby Kate"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/IMG_5355.jpeg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/Baby_sandy_sam.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/IMG_3368.jpeg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/IMG_0001.jpeg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/IMG_4537.jpeg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/Sam_baby_dog.JPG" alt=""></div>
         </div>
     </div>
 </section>
 
 <section id="map" class="section-padding-top">
-    <div class="text-center">
+    <div class="text-center header">
         <h3>How do I get there?</h3>
         <p>It's way easier than you think!</p>
     </div>
@@ -118,8 +135,10 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h5>That Amazing Place</h5>
-                            <p>Hubbards Hall Drive, Harlow CM17 0NH</p>
+                            <h4>That Amazing Place</h4>
+                            <p>Hubbards Hall Drive</p>
+                            <p>Harlow</p>
+                            <p>CM17 0NH</p>
                         </div>
                         <!-- <div class="col-md-6">
                             <h5>Contact</h5>
@@ -142,65 +161,54 @@
 <section class="events section-padding" id="events">
     <div class="container" id="timeline">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Order of Events</h3>
+            <div class="col-md-12 text-center header">
+                <h3>Order of Events</h3>
+                <p>October 15th 2021</p>
             </div>
         </div>
-        <div class="timeline-container">
-            <div class="timeline-block">
-              <span class="timeline-milestone"></span>
-    
-              <div class="timeline-content">
-                <h5>Guests arrive</h5>
-                
-                <span class="timeline-date">15:30</span>
-              </div>
-            </div>
-    
-            <div class="timeline-block">
-              <span class="timeline-milestone"></span>
-    
-              <div class="timeline-content">
-                <h5>Ceremony Begins</h5>
-                
-                <span class="timeline-date">16:00</span>
-              </div>
-            </div>
-    
-            <div class="timeline-block">
-              <span class="timeline-milestone"></span>
-    
-              <div class="timeline-content">
-                <h5>Drinks reception</h5>
-                
-                <span class="timeline-date">16:30</span>
-              </div>
-            </div>
-    
-            <div class="timeline-block">
-              <span class="timeline-milestone"></span>
-              <div class="timeline-content">
-                <h5>Food is served</h5>
-                <span class="timeline-date">17:30</span>
-              </div>
-            </div>
-    
-            <div class="timeline-block">
-              <span class="timeline-milestone"></span>
-              <div class="timeline-content">
-                <h5>Evening reception begins</h5>
-                <span class="timeline-date">19:00</span>
-              </div>
-            </div>
 
-            <div class="timeline-block">
-                <span class="timeline-milestone"></span>
-                <div class="timeline-content">
-                  <h5>Carriges</h5>
-                  <span class="timeline-date">23:30</span>
+        <div class="timeline">
+            <div class="timeline__wrap">
+                <div class="timeline__items">
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">15:30</h5>
+                            <h5 class="timeline-text">Guests arrive</h5>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">16:00</h5>
+                            <h5 class="timeline-text">Ceremony Begins</h5>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">16:30</h5>
+                            <h5 class="timeline-text">Drinks reception</h5>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">17:30</h5>
+                            <h5 class="timeline-text">Wedding Breakfast</h5>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">19:00</h5>
+                            <h5 class="timeline-text">Evening reception begins</h5>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__content">
+                            <h5 class="timeline-date">23:30</h5>
+                            <h5 class="timeline-text">Carriages</h5>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
     </div>
 
 </section>
@@ -209,10 +217,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3><a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></h3>
-                <p>
-                    But please don't post any pictures until after the big day!
-                </p>
+                <div class="header">
+                    <h3><a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></h3>
+                    <p>
+                        But please don't post any pictures until after the big day!
+                    </p>
+                </div>
             </div>
         </div>
         <div class="row wp7">
@@ -227,10 +237,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>Registry</h3>
-                <p>
-                    Should you wish to give a wedding gift, we would greatly appreciate a contribution towards our honeymoon.
-                </p>
+                <div class="header">
+                    <h3>Registry</h3>
+                    <p>
+                        We are lucky enough to already have nearly everything we need for this but should you wish to give a wedding gift, we would greatly appreciate a contribution towards our honeymoon.
+                    </p>
+                </div>
+                <img src="img/giphy.gif" />
             </div>
         </div>
     </div>
@@ -267,8 +280,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <h3>RSVP</h3>
-                <p>We would greatly appreciate if you could RSVP before 15th of August 2021</p>
+                <div class="header">
+                    <h3>RSVP</h3>
+                    <p>We would greatly appreciate if you could RSVP before August 15th 2021</p>
+                </div>
                 <div class="row attending-select">
                     <div class="col-md-6 col-sm-6">
                         <a href="#" class="attending-box" data-attending="yes">
