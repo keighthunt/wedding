@@ -2,9 +2,13 @@
 
 $section-padding: 40px 0;
 
-section.intro, section.rsvp {
-	background: $section-light;
+section {
+	border-top: 1px solid #E6E9EA;
 }
-section.events, section.registry {
-	background: $section-dark;
+
+section.intro, section.rsvp {
+	//background: $section-light;
+}
+section.instagram {
+	
 }

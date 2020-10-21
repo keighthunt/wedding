@@ -32,6 +32,14 @@
         transition: opacity 0.5s, visibility 0s 0.5s;
     }
 
+    .fixed header ul.primary-nav li a {
+        font-size: 16px;
+    }
+
+    .header-nav.open {
+        
+    }
+
     ul.member-actions {
         position: static;
     }
@@ -222,7 +230,8 @@
     
     #map-content {
         margin-top: 0;
-        padding: 35px;
+        padding: 20px;
+        min-width: 360px;
     }
 
     .rsvp {
@@ -241,7 +250,7 @@
 @media screen and (max-width: 768px) {
     .hero .hero-content {
         bottom: auto;
-        top: 70px;
+        top: 90px;
     }
 
     .hero h1 {
@@ -261,11 +270,15 @@
     }
 
     .section-padding {
-        padding: 0 0 20px;
+        padding: 20px 0 20px;
     }
 
     .section-padding-top {
-        padding: 0;
+        padding: 20px 0 0 ;
+    }
+
+    section .header {
+        padding-bottom: 20px;
     }
     
     footer ul.footer-group {
