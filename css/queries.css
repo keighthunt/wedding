@@ -259,12 +259,14 @@
     }
 
     .hero h1 {
+        font-weight: normal;
         font-size: 100px;
     }
 
     .hero-content h1, 
     .hero-content h3 {
         color: #000;
+        text-shadow: none;
     }
 }
 
@@ -275,11 +277,11 @@
     }
 
     .section-padding {
-        padding: 20px 0 20px;
+        padding: 50px 0 50px;
     }
 
     .section-padding-top {
-        padding: 20px 0 0 ;
+        padding: 50px 0 0 ;
     }
 
     section .header {

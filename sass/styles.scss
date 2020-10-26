@@ -280,10 +280,13 @@ Hero
     font-size: 180px;
     line-height: 100px;
     margin: 0;
+    text-shadow:-1px -1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,1px 1px 0 #000;
+    font-weight: bold;
   }
   h3 {
     color: $txt-light;
     margin-top: 0;
+    text-shadow:-1px -1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,1px 1px 0 #000;
   }
   p.intro {
     color: $txt-light;
@@ -850,6 +853,7 @@ RSVP form
 #registry {
   img {
     max-width: 400px;
+    width: 100%;
   }
 }
 /* ==========================================================================
