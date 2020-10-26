@@ -8,7 +8,7 @@ $txt-secondary: #333333;
 $txt-light: #fff;
 // header/hero
 $txt-accent: #ACB1B4;
-$form-placeholder: #BCC1C3;
+$form-placeholder: $txt-secondary;
 // form placeholder text
 // Global colours
 $accent-color: #333333;
@@ -26,3 +26,5 @@ $footer-secondary: #373D4A;
 // Keylines
 $keyline-color: #E6E9EA;
 $footer-keyline-color: #4E566C;
+
+$rsvp-color: #E0AFA0;

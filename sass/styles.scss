@@ -683,7 +683,8 @@ RSVP form
     display: block;
     background: $accent-color;
     color: $white-color;
-    line-height: 100px;
+    line-height: 70px;
+    border-radius: 40px;
     @media only screen and (max-width: 768px) {
       margin-bottom: 15px;
     }
@@ -733,7 +734,7 @@ RSVP form
     }
     .rsvp-btn {
       padding: 15px 0;
-      border-radius: 3px;
+      border-radius: 40px;
       width: 100%;
       font-size: 13px;
 
@@ -848,7 +849,7 @@ RSVP form
 
 #registry {
   img {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 /* ==========================================================================
@@ -930,13 +931,11 @@ gallery
     transition: transform 300ms ease;
     transition: all 0.5s ease;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     .gallery {
       grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     }
   }
   @media (max-width: 400px) {
-    .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    }
+    
   }

@@ -36,8 +36,12 @@
         font-size: 16px;
     }
 
-    .header-nav.open {
-        
+    .nav-toggle.active span {
+        background: none;
+    }
+    .nav-toggle.active span:before,
+    .nav-toggle.active span:after {
+        background: #fff;
     }
 
     ul.member-actions {
@@ -96,6 +100,7 @@
     }
 
     nav ul.primary-nav li a {
+        color: #fff;
         padding-right: 0;
     }
 
@@ -265,8 +270,8 @@
 
 @media screen and (max-width: 640px) {
 
-    #intro {
-        display: none;
+    .gallery img {
+        
     }
 
     .section-padding {

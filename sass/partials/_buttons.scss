@@ -53,3 +53,9 @@
 .btn-margin-right {
 	margin-right: 20px;
 }
+
+.rsvp-btn {
+	color: $txt-primary;
+	background: $rsvp-color;
+	border: solid 2px $rsvp-color;
+}
