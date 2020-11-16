@@ -2,13 +2,6 @@
 
 $section-padding: 40px 0;
 
-section {
+section:not(.hero) {
 	border-top: 1px solid #E6E9EA;
-}
-
-section.intro, section.rsvp {
-	//background: $section-light;
-}
-section.instagram {
-	
 }
