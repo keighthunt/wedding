@@ -134,7 +134,7 @@ $(document).ready(function () {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 20) {
-                $('section.navigation').addClass('fixed');
+                $('div.navigation').addClass('fixed');
                 $('header').css({
                     "border-bottom": "none",
                     "padding": "35px 0"
