@@ -146,7 +146,7 @@ $(document).ready(function () {
                     "top": "24px",
                 });
             } else {
-                $('section.navigation').removeClass('fixed');
+                $('div.navigation').removeClass('fixed');
                 $('header').css({
                     "border-bottom": "solid 1px rgba(255, 255, 255, 0.2)",
                     "padding": "50px 0"
