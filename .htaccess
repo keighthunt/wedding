@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "restricted area"
-AuthUserFile /Users/katehunt/Documents/Repos/wedding-website/.htpasswd
-require valid-user
