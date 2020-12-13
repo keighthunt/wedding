@@ -317,6 +317,19 @@ Hero
   z-index: 999;
   width: 100%;
 
+  header {
+    border-bottom: none;
+    padding: 35px 0;
+  }
+
+  .member-actions {
+    top: 26px;
+  }
+
+  .navicon {
+    top: 24px;
+  }
+
   .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
     background: #fff;
   }
@@ -376,11 +389,6 @@ header {
       }
     }
   }
-  ul.member-actions {
-    li {
-      display: inline;
-    }
-  }
   .header-nav {
     display: inline-block;
   }
@@ -389,6 +397,13 @@ header {
     right: 0;
     top: 41px;
     transition: all 300ms ease-in-out;
+    li {
+      display: inline;
+    }
+  }
+
+  .navicon {
+    top: 48px;
   }
 }
 .down-arrow {
