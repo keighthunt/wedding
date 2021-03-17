@@ -7,6 +7,12 @@ jQuery.browser = {};
         jQuery.browser.version = RegExp.$1;
     }
 })();
+
+AOS.init({
+    once: true,
+    disable: 'mobile'
+});
+
 $(document).ready(function () {
 
     /***************** Timeline ******************/
