@@ -26,10 +26,6 @@
     "yargs-parser": "^20.2.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
-    "font-awesome": "^4.7.0",
-    "waypoints": "^4.0.1"
+    "@fortawesome/fontawesome-free": "^5.15.1"
   }
 }
