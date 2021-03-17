@@ -173,20 +173,6 @@ Animations
 }
 
 /* ==========================================================================
-Waypoinsts
-========================================================================== */
-.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9 {
-  visibility: hidden
-}
-.wp8, .wp9 {
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s
-}
-.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
-  visibility: visible
-}
-
-/* ==========================================================================
 Navigation
 ========================================================================== */
 .header-nav.open {
@@ -272,11 +258,6 @@ Hero
   background-size: cover;
   position: relative;
 
-  /*.rsvp-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-  }*/
   .down-arrow a {
     color: $txt-light;
   }
@@ -289,6 +270,7 @@ Hero
     text-shadow:-1px -1px 0 #000,-1px 1px 0 #000,1px -1px 0 #000,1px 1px 0 #000;
     font-weight: bold;
   }
+
   h3 {
     color: $txt-light;
     margin-top: 0;
@@ -516,6 +498,27 @@ Google map
 }
 
 /* ==========================================================================
+Hotels
+========================================================================== */
+@media only screen and (min-width: 768px) {
+  .hotels {
+    .row + .row {
+      margin-top: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .hotels {
+    .row + .row {
+      margin-top: 20px;
+    }
+  }
+  .hotel + .hotel {
+    padding-top: 20px;
+  }
+}
+
+/* ==========================================================================
 RSVP form
 ========================================================================== */
 .rsvp {
@@ -714,7 +717,6 @@ footer {
   .to-top-wrapper {
     font-size: 30px;
     display: block;
-    cursor: pointer;
     margin: -25px auto 50px;
     border-radius: 50%;
     width: 50px;

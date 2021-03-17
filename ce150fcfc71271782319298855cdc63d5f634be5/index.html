@@ -28,13 +28,13 @@
     <link rel="stylesheet" href="../css/normalize.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/jquery.fancybox.css">
-    <link rel="stylesheet" href="../css/flexslider.css">
     <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="../css/queries.css">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="../js/timeline.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body id="top">
@@ -43,7 +43,7 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <section class="hero">
-    <div class="navigation">
+    <div class="navigation" data-aos="fade-down">
         <header>
             <div class="header-content">
                 <div class="header-nav">
@@ -54,6 +54,7 @@
                             <li><a href="#events">The Day</a></li>
                             <li><a href="#instagram">Pictures</a></li>
                             <li><a href="#registry">Registry</a></li>
+                            <li><a href="#hotels">Hotels</a></li>
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#rsvp" class="btn-fill btn-small rsvp-btn">RSVP</a></li>
@@ -70,16 +71,16 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="text-center">
-                    <h1>Sam & Kate</h1>
-                    <h3>October 15<sup>th</sup> 2021</h3>
+                    <h1 data-aos="fade-up">Sam & Kate</h1>
+                    <h3 data-aos="fade-left">October 15<sup>th</sup> 2021</h3>
                     <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-fill btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs text-center">
+                <a data-aos="fade-right" href="#rsvp" class="btn btn-fill btn-large rsvp-btn">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
@@ -88,10 +89,10 @@
 
 <section id="intro" class="section-padding">
     <div class="text-center header">
-        <h3>Us</h3>
-        <p>Through the years</p>
+        <h3 data-aos="fade-down">Us</h3>
+        <p data-aos="fade-up">Through the years</p>
     </div>
-    <div class="gallery" id="gallery">
+    <div class="gallery" id="gallery" data-aos="fade-up">
         <div class="gallery-item">
             <div class="content"><img src="../img/kate_pigtails.jpeg" alt=""></div>
         </div>
@@ -145,8 +146,8 @@
 
 <section id="map" class="section-padding-top">
     <div class="text-center header">
-        <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
+        <h3 data-aos="fade-down">How do I get there?</h3>
+        <p data-aos="fade-up">It's way easier than you think!</p>
     </div>
     <div class="map-container">
         <div id="map-canvas"></div>
@@ -182,8 +183,8 @@
     <div class="container" id="timeline">
         <div class="row">
             <div class="col-md-12 text-center header">
-                <h3>October 15th 2021</h3>
-                <p>Order of Events</p>
+                <h3 data-aos="fade-down">October 15th 2021</h3>
+                <p data-aos="fade-up">Order of Events</p>
             </div>
         </div>
 
@@ -235,47 +236,39 @@
 
 <section id="instagram" class="instagram section-padding">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="header">
-                    <h3><a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></h3>
-                    <p>We can't wait to see what pictures and videos you'll all take, help us capture the day, by tagging your photos with <a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></p>
-                    <p>We ask that you don't take any during the ceremony and please don't post any pictures until after the big day</p>
-                </div>
-            </div>
+        <div class="header text-center">
+            <h3 data-aos="fade-down"><a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></h3>
+            <p data-aos="fade-left">We can't wait to see what pictures and videos you'll all take, help us capture the day, by tagging your photos with <a href="https://instagram.com/explore/tags/hastagtbc/" target="_blank">#KnightHunt</a></p>
+            <p data-aos="fade-right">We ask that you don't take any during the ceremony and please don't post any pictures until after the big day</p>
         </div>
-        <div class="row wp7">
-            <div class="col-md-4 col-md-offset-4">
+        <div class="row">
+            <div class="col-md-4 col-xs-6 col-xs-offset-3 col-md-offset-4" data-aos="flip-left">
                 <img src="../img/instagram_filled.png">
             </div>
         </div>
     </div>
 </section>
 
-<section id="registry" class="section-padding registry">
+<section id="registry" class="section-padding text-center registry">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="header">
-                    <h3>Registry</h3>
-                </div>
-                <div>
-                    <p>We're incredibly fortunate to already have everything we need for our home.</p>
-                    <p>So, we're skipping out of tradition and would love for you to help us create an unforgettable honeymoon in</p>
-                    <ul class="c-rainbow">
-                        <li class="c-rainbow__layer c-rainbow__layer--white">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--orange">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--red">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--violet">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--blue">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--green">HAWAII</li>
-                        <li class="c-rainbow__layer c-rainbow__layer--yellow">HAWAII</li>
-                    </ul>
-                    <p>Your presence is present enough, but for those who wish to contribute,</p>
-                    <p><a class="link" href="https://prezola.com/wishlists/10229246/" target="_blank">click here to choose a gift from our honeymoon registry.</a></p>
-                <img src="../img/hawaii.png" />
-            </div>
+        <div class="header">
+            <h3 data-aos="fade-down">Registry</h3>
         </div>
+        <div>
+            <p data-aos="fade-left">We're incredibly fortunate to already have everything we need for our home.</p>
+            <p data-aos="fade-left">So, we're skipping out of tradition and would love for you to help us create an unforgettable honeymoon in</p>
+            <ul class="c-rainbow" data-aos="zoom-in">
+                <li class="c-rainbow__layer c-rainbow__layer--white">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--orange">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--red">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--violet">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--blue">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--green">HAWAII</li>
+                <li class="c-rainbow__layer c-rainbow__layer--yellow">HAWAII</li>
+            </ul>
+            <p data-aos="fade-right">Your presence is present enough, but for those who wish to contribute,</p>
+            <p data-aos="fade-right"><a class="link" href="https://prezola.com/wishlists/10229246/" target="_blank">click here to choose a gift from our honeymoon registry.</a></p>
+        <img data-aos="zoom-in" src="../img/hawaii.png" />
     </div>
 </section>
 
@@ -289,6 +282,51 @@
     </div>
 </section>
 
+<section class="hotels text-center section-padding" id="hotels">
+    <div class="container">
+        <div class="header">
+            <h3 data-aos="fade-down">Nearby Hotels</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 hotel" data-aos="fade-up">
+                <h5>Green Man Hotel</h5>
+                <p>Mulberry Green</p>
+                <p>Old Harlow</p>
+                <p>Essex</p>
+                <p>CM17 0ET</p>
+                <p>Tel: 01279 442521</p>
+            </div>
+            <div class="col-sm-6 hotel" data-aos="fade-up">
+                <h5>Premier Inn Old Harlow</h5>
+                <p>Cambridge Road</p>
+                <p>Old Harlow</p>
+                <p>Essex</p>
+                <p>CM20 2EP</p>
+                <p>Tel: 0871 527 8488</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 hotel" data-aos="fade-up">
+                <h5>Travelodge Harlow Hotel</h5>
+                <p>Edinburgh Gate</p>
+                <p>Harlow</p>
+                <p>Essex</p>
+                <p>CM20 2JE</p>
+                <p>United Kingdom</p>
+                <p>Tel: 0871 984 6289</p>
+            </div>
+            <div class="col-sm-6 hotel" data-aos="fade-up">
+                <h5>Park Inn Harlow</h5>
+                <p>Southern Way (M11 Jct 7)</p>
+                <p>Harlow</p>
+                <p>CM18 7BA</p>
+                <p>Tel: 01279 829988</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
 <section class="rsvp text-center section-padding" id="rsvp">
 
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -298,8 +336,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>Looking forward to seeing you in October!</p>
+                        <h3 data-aos="fade-down">Thank you!</h3>
+                        <p data-aos="fade-up">Looking forward to seeing you in October!</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -311,13 +349,13 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="header">
-                    <h3>RSVP</h3>
-                    <p>Please RSVP before August 15th 2021</p>
-                    <p>Make sure each person has submitted an RSVP individually</p>
+                    <h3 data-aos="fade-down">RSVP</h3>
+                    <p data-aos="fade-left">Please RSVP before August 15th 2021</p>
+                    <p data-aos="fade-right">Make sure each person has submitted an RSVP individually</p>
                 </div>
                 <div class="row attending-select">
-                    <div class="col-md-6 col-sm-6">
-                        <a href="#" class="attending-box" data-attending="yes">
+                    <div class="col-md-6 col-sm-6" data-aos="zoom-out-right">
+                        <a href="#rsvp-form" class="attending-box" data-attending="yes">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                                 <circle class="path circle" fill="none" stroke="#fff" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                                 <polyline class="path check" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
@@ -325,8 +363,8 @@
                             I'm coming!
                         </a>
                     </div>
-                    <div class="col-md-6 col-sm-6">
-                        <a href="#" class="attending-box" data-attending="no">
+                    <div class="col-md-6 col-sm-6" data-aos="zoom-out-left">
+                        <a href="#rsvp-form" class="attending-box" data-attending="no">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
                                 <circle class="path circle" fill="none" stroke="#fff" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                                 <line class="path line" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
@@ -396,17 +434,20 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p><span class="fa fa-heart pulse2"></span></p>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 <script src="../js/jquery.fancybox.pack.js"></script>
 <script src="../js/vendor/bootstrap.min.js"></script>
-<script src="../js/jquery.flexslider-min.js"></script>
 <script src="../js/jquery.mb.YTPlayer.min.js"></script>
 <script src="../node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 <script src="../js/vendor/ouical.js"></script>
