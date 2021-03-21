@@ -22,16 +22,47 @@ $(document).ready(function () {
         portfolioBlock: $('#portfolio .item'),
         offset: 0.8,
         portfolioCalled: false
-      },
-      scrollSection,
-      attendance;
+    },
+    scrollSection,
+    attendance;
 
-
-  function hideBlocks(blocks, offset) {
-    blocks.each(function(){
-      ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-milestone, .timeline-content').addClass('is-hidden');
+    var iconFeature = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([0.148741, 51.773399])),
+        name: 'That Amazing Place',
     });
-  }
+    
+    var map = new ol.Map({
+        target: 'map-canvas',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            }),
+            new ol.layer.Vector({
+                source: new ol.source.Vector({
+                  features: [iconFeature]
+                }),
+                style: new ol.style.Style({
+                  image: new ol.style.Icon({
+                    anchor: [0.5, 46],
+                    anchorXUnits: 'fraction',
+                    anchorYUnits: 'pixels',
+                    src: 'https://openlayers.org/en/latest/examples/data/geolocation_marker.png'
+                  })
+                })
+            })
+        ],
+        interactions: ol.interaction.defaults({mouseWheelZoom:false}),
+        view: new ol.View({
+            center: ol.proj.fromLonLat([0.148741, 51.773399]),
+            zoom: 16
+        })
+    });
+
+    function hideBlocks(blocks, offset) {
+        blocks.each(function(){
+            ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-milestone, .timeline-content').addClass('is-hidden');
+        });
+    }
 
   function showBlocks(blocks, offset) {
     blocks.each(function(){
@@ -243,35 +274,6 @@ timeline(document.querySelectorAll('.timeline'), {
 });
 
 /********************** Extras **********************/
-
-// Google map
-function initMap() {
-    var location = {lat: 51.773399, lng: 0.148741};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-
-function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
-    });
-}
 
 // alert_markup
 function alert_markup(alert_type, msg) {

@@ -35,6 +35,8 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="js/timeline.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    
     
 </head>
 <body id="top">
@@ -149,8 +151,9 @@
         <h3 data-aos="fade-down">How do I get there?</h3>
         <p data-aos="fade-up">It's way easier than you think!</p>
     </div>
-    <div class="map-container">
-        <div id="map-canvas"></div>
+    <div class="map-container" data-aos="zoom-in">
+        
+        <div id="map-canvas" class="map-canvas"></div>
         <div id="map-content-wrapper" class="container pointer-events-none">
             <div class="row">
                 <div class="text-center">
@@ -272,7 +275,7 @@
     </div>
 </section>
 
-<section id="video-bg" class="hidden-sm hidden-xs">
+<section id="video-bg" class="hidden-sm hidden-xs" data-aos="zoom-in">
     <div id="bgndVideo" class="player"
          data-property="{videoURL:'https://youtu.be/a3Gz_G8xeLo',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
     </div>
@@ -451,7 +454,6 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC2Gvl7Ha1l1lo1CnREF4a0q3P4rKRCQc&callback=initMap"></script>
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
 </body>
 </html>
